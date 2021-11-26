@@ -1,0 +1,127 @@
+.trending__component {
+  transition: transform 450ms;
+  position: relative;
+}
+
+.trending__component:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.trending__card {
+  max-width: var(--card-width);
+  margin: 10px;
+}
+.trending__poster {
+  position: relative;
+  top: 0;
+  max-width: var(--card-width);
+  object-fit: contain;
+  border-radius: 1.5rem;
+  z-index: 1;
+  border: 1px solid grey;
+}
+
+.trending__poster:hover {
+  border-radius: 1.5rem;
+  z-index: -1;
+}
+.trending__layout {
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(183, 186, 205);
+  background: radial-gradient(
+    circle,
+    rgba(183, 186, 205, 0.5105392498796393) 0%,
+    rgba(0, 0, 0, 0.7570378493194152) 100%
+  );
+  /* width: 200px; */
+  z-index: 22;
+  opacity: 0;
+  transition: opacity 450ms;
+}
+.trending__layout:hover {
+  opacity: 1;
+}
+.trending__title {
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 720px) {
+  .trending__card {
+    max-width: var(--card-width2);
+  }
+  .trending__poster {
+    max-width: var(--card-width2);
+  }
+}
+@media screen and (max-width: 618px) {
+  .trending__card {
+    max-width: var(--card-width3);
+  }
+  .trending__poster {
+    max-width: var(--card-width3);
+    border-radius: 1rem;
+  }
+}
+@media screen and (max-width: 542px) {
+  .trending__card {
+    max-width: var(--card-width4);
+  }
+  .trending__poster {
+    max-width: var(--card-width4);
+  }
+}
+@media screen and (max-width: 512px) {
+  .trending__card {
+    max-width: var(--card-width2);
+  }
+  .trending__poster {
+    max-width: var(--card-width2);
+  }
+  .trending__title {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 412px) {
+  .trending__card {
+    max-width: 140px;
+  }
+  .trending__poster {
+    max-width: 140px;
+    border-radius: 1rem;
+  }
+}
+@media screen and (max-width: 352px) {
+  .trending__card {
+    max-width: 120px;
+  }
+  .trending__poster {
+    max-width: 120px;
+    border-radius: 0.7rem;
+  }
+}
+@media screen and (max-width: 312px) {
+  .trending__card {
+    max-width: 100px;
+  }
+  .trending__poster {
+    max-width: 100px;
+    border-radius: 0.5rem;
+  }
+}
+@media screen and (max-width: 272px) {
+  .trending__card {
+    max-width: var(--card-width2);
+  }
+  .trending__poster {
+    max-width: var(--card-width2);
+    border-radius: 0.8rem;
+  }
+}

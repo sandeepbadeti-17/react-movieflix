@@ -1,0 +1,38 @@
+.movies {
+  max-width: 1200px;
+  margin: auto;
+}
+.movies h3 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+.movies__list {
+  /* max-width: 1200px; */
+  margin: auto;
+  padding: 5rem 0;
+}
+.movie__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pagination li {
+  padding: 0.5rem;
+}
+.pagination button {
+  color: white;
+  background: grey;
+}
+.pagination ul {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 382px) {
+  .pagination li {
+    padding: 0;
+  }
+}

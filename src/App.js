@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Container } from "@material-ui/core";
 
-function App() {
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import Movies from "./components/Movies/Movies";
+import Series from "./components/Series/Series";
+import Serach from "./components/Search/Search";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+      </div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/movies">
+          <div className="mv">
+            <Movies type="movie" />
+          </div>
+        </Route>
+        <Route path="/series">
+          <div className="mv">
+            <Series />
+          </div>
+        </Route>
+        <Route path="/search">
+          <div className="mv">
+            <Serach />{" "}
+          </div>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;

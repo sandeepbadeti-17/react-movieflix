@@ -1,0 +1,111 @@
+.footer {
+  position: relative;
+}
+.footer__background {
+  position: absolute;
+  /* top: 0; */
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.footer__layout {
+  z-index: 0;
+  position: absolute;
+
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.785049053801208) 0%,
+    rgba(8, 8, 8, 1) 100%
+  );
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.footer__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  height: 70vh;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 4rem;
+}
+.footer__title {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  cursor: pointer;
+}
+.footer__title:hover {
+  color: red;
+}
+.footer__content ul {
+  list-style: none;
+  max-width: 1000px;
+  font-size: 13px;
+  font-family: var(--font-montserrat);
+}
+.footer__content li {
+  display: inline-block;
+  padding-right: 12px;
+  margin-bottom: 16px;
+  width: 25%;
+}
+.footer__content a {
+  text-decoration: none;
+  color: white;
+}
+.footer__content a:hover {
+  cursor: pointer;
+  color: red;
+}
+/* _________________________________________________ */
+@media screen and (max-width: 860px) {
+  .footer__content {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 820px) {
+  .footer__content {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 602px) {
+  .footer__content {
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  .footer__content li {
+    width: 33%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer__content li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .footer__content ul {
+    margin-bottom: 5rem;
+  }
+}
+/* __________________________________________ipad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .footer__content {
+    height: 50vh;
+  }
+}

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* background: rgb(8 8 8); */
+}
+
+:root {
+  --font-montserrat: "Montserrat", sans-serif;
+
+  --card-width: 204px;
+  --card-width2: 170px;
+  --card-width3: 150px;
+  --card-width4: 140px;
+}
+
+.App {
+  margin: auto;
+  font-family: var(--font-montserrat);
+  background: rgb(8 8 8);
+}
+.mv {
+  background: rgb(8 8 8);
+  color: white;
+  font-family: var(--font-montserrat);
+}
