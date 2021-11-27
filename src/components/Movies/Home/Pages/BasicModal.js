@@ -32,13 +32,16 @@ export default function BasicModal({
   poster,
   backgroundImg,
   data,
-  type
+  type,
+  id
 }) {
   const [open, setOpen] = React.useState(false);
-  const [id, setId] = React.useState("");
+
   const handleOpen = () => {
     setOpen(true);
-    setId(data.id);
+    // setId(data.id);
+
+    // console.log(id);
   };
   const handleClose = () => setOpen(false);
   return (

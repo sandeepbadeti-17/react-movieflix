@@ -19,12 +19,14 @@
   max-width: 250px;
   padding: 1.5rem;
 }
+
 .modal__details {
   position: relative;
   top: 0;
   display: flex;
   flex-direction: column;
 }
+
 .modal__title {
   font-size: var(--title-fontSize2);
   padding-bottom: 2rem;
@@ -32,16 +34,18 @@
   max-width: 500px;
   /* font-weight: 600; */
 }
+
 .modal__overview {
   font-family: var(--font-montserrat);
   padding-bottom: 2rem;
   max-width: 550px;
   /* font-weight: 200; */
 }
+
 .btn {
   font-size: 1rem;
   font-family: var(--font-montserrat);
-  padding: 0.7rem 1.5rem;
+  padding: 0.4rem 0.8rem;
   cursor: pointer;
   border: 2px solid gray;
   border-radius: 2rem;
@@ -49,6 +53,7 @@
   background: transparent;
   color: white;
 }
+
 .btn:hover {
   background: red;
   color: white;
@@ -63,18 +68,22 @@
   border-radius: 1.5rem;
   box-shadow: 10px 0px 6px -9px white;
 }
+
 .t::-webkit-scrollbar {
   display: none;
 }
+
 .container {
   background: rgb(8 8 8);
   color: white;
   font-family: var(--font-montserrat);
   padding: 20px 0;
 }
+
 h3 {
   font-weight: 500;
 }
+
 .videoPlayer {
   /* height: 100%; */
   max-width: 100%;
@@ -84,49 +93,61 @@ h3 {
   .modal__title {
     font-size: 2rem;
   }
-  .modal__overview {
-  }
+
+  .modal__overview {}
+
   .btn {
     padding: 0.5rem 1rem;
   }
 }
+
 @media screen and (max-width: 750px) {
   .modal__content {
     padding: 1rem;
   }
+
   .modal__poster {
     display: none;
   }
+
   .modal__title {
     font-size: 2.2rem;
   }
+
   .btn {
     padding: 0.7rem 1.5rem;
   }
 }
+
 @media screen and (max-width: 750px) {
   .modal__title {
     font-size: 2rem;
   }
+
   .btn {
     padding: 0.5rem 1.2rem;
   }
 }
+
 @media screen and (max-width: 450px) {
   .modal__content {
     padding: 1.5rem;
   }
+
   .modal__title {
     font-size: 1.5rem;
   }
+
   .btn {
     padding: 0.5rem 0.8rem;
   }
 }
+
 @media screen and (max-width: 450px) {
   .modal__title {
     font-size: 1.2rem;
   }
+
   .modal__overview {
     font-size: 0.8rem;
   }
@@ -136,6 +157,7 @@ h3 {
     font-size: 0.8rem;
   }
 }
+
 @media screen and (max-width: 350px) {
   .modal__title {
     /* font-size: 1rem; */
@@ -145,41 +167,49 @@ h3 {
     padding: 0.3rem 0.5rem;
   }
 }
+
 @media screen and (max-width: 650px) {
   .videoPlayer {
     width: 600px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .videoPlayer {
     width: 550px;
   }
 }
+
 @media screen and (max-width: 550px) {
   .videoPlayer {
     width: 500px;
   }
 }
+
 @media screen and (max-width: 500px) {
   .videoPlayer {
     width: 450px;
   }
 }
+
 @media screen and (max-width: 450px) {
   .videoPlayer {
     width: 400px;
   }
 }
+
 @media screen and (max-width: 400px) {
   .videoPlayer {
     width: 350px;
   }
 }
+
 @media screen and (max-width: 350px) {
   .videoPlayer {
     width: 300px;
   }
 }
+
 @media screen and (max-width: 300px) {
   .videoPlayer {
     width: 280px;

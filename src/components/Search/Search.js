@@ -12,6 +12,7 @@ import Box from "@mui/material/Box";
 
 import axios from "axios";
 import Footer from "../Footer/Footer";
+import BasicModal from "../Movies/Home/Pages/BasicModal";
 export default function Serch() {
   const [type, setType] = useState(0);
   const [searchText, setSearchText] = useState("");
@@ -22,12 +23,11 @@ export default function Serch() {
   const fetchSearch = async () => {
     try {
       const { data } = await axios.get(
-        `https://api.themoviedb.org/3/search/${
-          type ? "tv" : "movie"
+        `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"
         }?api_key=205cebadb659f10935a047f6a32e5daa&language=en-US&query=${searchText}&page=${page}&include_adult=false`
       );
       setContent(data.results);
-      // console.log(setContent(data.results));
+      // console.log(data.results);
       // console.log(searchText.length);
       setnumofPages(data.total_pages);
     } catch (error) {
@@ -104,38 +104,42 @@ export default function Serch() {
             {content &&
               content.map((data) => {
                 return (
-                  <div key={data.id} className="trending__card">
-                    <div className="trending__component ">
-                      <img
-                        className="trending__poster"
-                        src={
-                          data?.poster_path
-                            ? `${img_300}/${
-                                data?.poster_path || data?.backdrop_path
+                  <BasicModal
+                    title={data?.title || data?.original_title || data?.name}
+                    poster={`${data?.poster_path || data?.backdrop_path}`}
+                    backgroundImg={`${data?.backdrop_path || data?.poster_path
+                      }`}
+                    overview={`${data?.overview}`}
+                    type={`${type ? "tv" : "movie"}`}
+                    id={`${data?.id}`}
+                    key={data.id}
+                  >
+                    <div className="trending__card">
+                      <div className="trending__component ">
+                        <img
+                          className="trending__poster"
+                          src={
+                            data?.poster_path
+                              ? `${img_300}/${data?.poster_path || data?.backdrop_path
                               }`
-                            : no_300
-                        }
-                        alt=""
-                      />
-                      <div className="trending__layout">
-                        <YouTubeIcon
-                          style={{ width: "4rem", height: "4rem" }}
+                              : no_300
+                          }
+                          alt=""
                         />
+                        <div className="trending__layout">
+                          <YouTubeIcon
+                            style={{ width: "4rem", height: "4rem" }}
+                          />
+                        </div>
                       </div>
+                      <span className="trending__title">
+                        {data?.title || data?.original_title || data?.name}
+                      </span>
                     </div>
-                    <span className="trending__title">
-                      {data?.title || data?.original_title || data?.name}
-                    </span>
-                  </div>
+                  </BasicModal>
                 );
               })}
-            {/* {searchText &&
-            !content &&
-            (type ? (
-              <h2 style={{ color: "black" }}>No Series Found</h2>
-            ) : (
-              <h2 style={{ color: "black" }}>NO Movies Found</h2>
-            ))} */}
+
           </div>
           {numOfPages > 1 && (
             <Pagination

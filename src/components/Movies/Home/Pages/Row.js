@@ -16,7 +16,6 @@ export default function Row({ title, fetchUrl, type }) {
   const [pageNo, setPage] = useState();
   const [numOfPages, setNumOfPages] = useState();
   const genreforURL = useGenre(selectedGenres);
-
   const fetchData = async () => {
     const { data } = await axios.get(
       `https://api.themoviedb.org/3/discover/${type}?api_key=205cebadb659f10935a047f6a32e5daa&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${pageNo}&with_genres=${genreforURL}`
@@ -32,6 +31,9 @@ export default function Row({ title, fetchUrl, type }) {
   };
   useEffect(() => {
     fetchData();
+    return () => {
+      fetchData();
+    };
   }, [genreforURL, pageNo]);
   return (
     <div className="movies">
@@ -48,26 +50,26 @@ export default function Row({ title, fetchUrl, type }) {
       </Container>
       <div className="movie__card">
         {content.map((data) => {
+          // console.log(data.id);
           return (
             <BasicModal
-              key={data.id}
               title={data?.title || data?.original_title || data?.name}
               poster={`${data?.poster_path || data?.backdrop_path}`}
               backgroundImg={`${data?.backdrop_path || data?.poster_path}`}
               overview={`${data?.overview}`}
               type={type}
-              data={data}
+              id={`${data?.id}`}
+              key={data.id}
             >
-              {/* {console.log(key)} */}
+              {console.log(data?.id)}
               <div className="trending__card">
                 <div className="trending__component ">
                   <img
                     className="trending__poster"
                     src={
                       data?.poster_path
-                        ? `${img_300}/${
-                            data?.poster_path || data?.backdrop_path
-                          }`
+                        ? `${img_300}/${data?.poster_path || data?.backdrop_path
+                        }`
                         : no_300
                     }
                     alt=""

@@ -2,13 +2,16 @@ import { img_300, landscape, img_original } from "../../../config";
 import "./landingpage.css";
 import SingleComponent from "./SingleComponent";
 import { Container, Box } from "@material-ui/core";
+import ChildModal from "../../Movies/Home/Pages/ChildModal";
 
 export default function LandingPage({
   title,
   key,
   overview,
   poster,
-  backgroundImg
+  backgroundImg,
+  id,
+  media_type
 }) {
   return (
     <div style={{ marginBottom: "1rem" }}>
@@ -38,8 +41,11 @@ export default function LandingPage({
             <h1 className="movie__title">{title}</h1>
             <p className="movie__overview">{overview} </p>
             <div>
-              <button className="btn btn1">Watch Now</button>
-              <button className="btn btn2">Watch Trailer</button>
+              <button className="btn">
+                <ChildModal id={id} type={media_type}>
+                  Watch Trailer
+                </ChildModal>
+              </button>
             </div>
           </div>
 

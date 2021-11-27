@@ -32,19 +32,20 @@ export default function Home() {
     <>
       <div className="trending">
         <LandingPage
-          title={`${
-            content?.original_title || content?.name || content?.title
-          }`}
+          title={`${content?.original_title || content?.name || content?.title
+            }`}
           backgroundImg={`${content?.backdrop_path || content?.poster_path}`}
           poster={`${content?.poster_path || content?.backdrop_path}`}
           overview={`${content?.overview}`}
           media_type={`${content?.media_type}`}
+          id={`${content?.id}`}
         />
         <div className="container">
           <Container>
             <SingleComponent
               title="Trending Movies"
               fetchUrl={trendingMovies}
+              type="movie"
             />
           </Container>
         </div>
@@ -53,17 +54,26 @@ export default function Home() {
             <SingleComponent
               title="TopRated Movies"
               fetchUrl={topRatedMovies}
+              type="movie"
             />
           </Container>
         </div>
         <div className="container">
           <Container>
-            <SingleComponent title="Trending Show" fetchUrl={trendingTv} />
+            <SingleComponent
+              title="Trending Show"
+              type="tv"
+              fetchUrl={trendingTv}
+            />
           </Container>
         </div>
         <div className="container">
           <Container>
-            <SingleComponent title="TopRated Shows" fetchUrl={topRatedTv} />
+            <SingleComponent
+              title="TopRated Shows"
+              type="tv"
+              fetchUrl={topRatedTv}
+            />
           </Container>
         </div>
         <Footer />

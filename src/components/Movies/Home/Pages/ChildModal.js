@@ -60,24 +60,23 @@ export default function ChildModal({ data, title, id, type }) {
         onClose={handleClose}
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
+        style={{ background: "#000000eb" }}
       >
-        <Box>
-          <Container sx={{ ...style }}>
-            <YouTube
-              videoId={trailerUrl} // defaults -> null
-              // defaults -> ''
-              opts={opts}
-              className="videoPlayer" // defaults -> {}
-              // defaults -> noop
+        <Container sx={{ ...style }}>
+          <YouTube
+            videoId={trailerUrl} // defaults -> null
+            // defaults -> ''
+            opts={opts}
+            className="videoPlayer" // defaults -> {}
+          // defaults -> noop
+          />
+          <Button onClick={handleClose}>
+            <CancelIcon
+              style={{ width: "3em", height: "2em", color: "red" }}
+              className="childModal__close"
             />
-            <Button onClick={handleClose}>
-              <CancelIcon
-                style={{ width: "3em", height: "2em", color: "red" }}
-                className="childModal__close"
-              />
-            </Button>
-          </Container>
-        </Box>
+          </Button>
+        </Container>
       </Modal>
     </React.Fragment>
   );

@@ -5,7 +5,7 @@ import { img_300 } from "../../../config";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { Box, Modal } from "@mui/material";
 import BasicModal from "../../Movies/Home/Pages/BasicModal";
-export default function SingleComponent({ title, fetchUrl }) {
+export default function SingleComponent({ title, fetchUrl, type }) {
   const [content, setContent] = useState([]);
   const [open, setOpen] = useState(false);
 
@@ -30,14 +30,15 @@ export default function SingleComponent({ title, fetchUrl }) {
               poster={`${data?.poster_path || data?.backdrop_path}`}
               backgroundImg={`${data?.backdrop_path || data?.poster_path}`}
               overview={`${data?.overview}`}
+              id={data?.id}
+              type={type}
             >
               <div className="trending__card">
                 <div className="trending__component ">
                   <img
                     className="trending__poster"
-                    src={`${img_300}/${
-                      data?.poster_path || data?.backdrop_path
-                    }`}
+                    src={`${img_300}/${data?.poster_path || data?.backdrop_path
+                      }`}
                     alt=""
                   />
                   <div className="trending__layout">
