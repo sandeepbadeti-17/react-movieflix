@@ -39,34 +39,34 @@ export default function Footer() {
         <div>
           <ul>
             <li>
-              <a href="/">FAQ</a>
+              <a href="https://sandeep-badeti.netlify.app/" target="_blank" rel='noopener noreferrer'>Portfolio</a>
             </li>
             <li>
-              <a href="/">Help Center</a>
+              <a href="https://github.com/sandeepbadeti-17" target="_blank" rel='noopener noreferrer'>GitHub</a>
             </li>
             <li>
-              <a href="/">Account</a>
+              <a href="https://www.linkedin.com/in/sandeep-badeti-56b3b520b/" target="_blank" rel='noopener noreferrer'>LinkedIn</a>
             </li>
             <li>
-              <a href="/">Media Centre</a>
+              <a href="https://twitter.com/Sandeep17347946?s=09%20" target="_blank" rel='noopener noreferrer'>Twitter</a>
             </li>
             <li>
-              <a href="/">Investor Relations</a>
+              <a href="https://instagram-clone-by-sb.netlify.app/" target="_blank" rel='noopener noreferrer'>Instagram</a>
             </li>
             <li>
-              <a href="/">Jobs</a>
+              <a href="https://instagram-clone-by-sb.netlify.app/" target="_blank" rel='noopener noreferrer'>Instagram_Clone</a>
             </li>
             <li>
-              <a href="/">Ways to Watch</a>
+              <a href="https://bill-cash.netlify.app/" target="_blank" rel='noopener noreferrer'>Bill Cash</a>
             </li>
             <li>
-              <a href="/">Terms of Use</a>
+              <a href="https://palindrome-date.netlify.app/" target="_blank" rel='noopener noreferrer'>Palindrome</a>
             </li>
             <li>
-              <a href="/">Privacy</a>
+              <a href="https://codesandbox.io/u/Sandeep-17-bot" target="_blank" rel='noopener noreferrer'>CodeSandBox</a>
             </li>
             <li>
-              <a href="/">Cookie Preferences</a>
+              <a href="https://hashnode.com/@Code-Sandeep">Hashnode</a>
             </li>
             <li>
               <a href="/">Corporate Information</a>
