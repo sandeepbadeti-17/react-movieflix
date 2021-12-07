@@ -34,7 +34,7 @@ export default function Footer() {
       <div className="footer__layout"></div>
       <div className="footer__content">
         <h1 className="footer__title" onClick={scrollTop}>
-          ShowTime
+          Movieflix
         </h1>
         <div>
           <ul>
@@ -81,7 +81,7 @@ export default function Footer() {
               <a href="/">Legal Notices</a>
             </li>
             <li>
-              <a href="/">Only on ShowTime</a>
+              <a href="/">Only on Movieflix</a>
             </li>
           </ul>
         </div>

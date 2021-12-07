@@ -41,7 +41,7 @@ export default function Header() {
             }}
           >
             <h1 style={{ cursor: "pointer" }} onClick={scrollTop}>
-              ShowTime
+              Movieflix
             </h1>
             <ul className="header__items">
               <li>
