@@ -22,7 +22,7 @@ export default function Row({ title, fetchUrl, type }) {
     );
 
     setContent(data.results);
-    // console.log(data.results);
+    console.log(data.results);
     setNumOfPages(data.total_pages);
   };
   const pageHandler = (page) => {

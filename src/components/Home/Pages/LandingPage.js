@@ -38,8 +38,8 @@ export default function LandingPage({
           }}
         >
           <div className="movie__details">
-            <h1 className="movie__title">{title}</h1>
-            <p className="movie__overview">{overview} </p>
+            <h1 className="movie__title">{title === "undefined" ? "Loading..." : title}</h1>
+            <p className="movie__overview">{overview === "undefined" ? "Loading..." : overview} </p>
             <div>
               <button className="btn">
                 <ChildModal id={id} type={media_type}>
@@ -51,7 +51,7 @@ export default function LandingPage({
 
           <img
             className="movie__poster"
-            src={poster ? `${img_300}/${poster}` : img_300}
+            src={poster ? `${img_300}/${poster}` : "Loading..."}
             alt={title}
           />
         </Container>
